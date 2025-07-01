@@ -26,6 +26,11 @@ body {
   line-height: 0.9375rem;
 }
 
+.logo{
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
 .navbar-nav {
   margin-right: 5rem;
 }
@@ -62,9 +67,11 @@ body {
   background-image: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  z-index: 1;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
 }
+
 
 .hero-content {
   max-width: 37.5rem;
@@ -112,12 +119,14 @@ body {
 
 .weather-city {
   font-weight: bolder;
-  font-size: 68px;
-  margin-top: 10px;
-  margin-left: 35px;
-  transform: translateY(-10px);
-  
+  font-size: clamp(2rem, 6vw, 4.25rem);
+  margin-top: calc(1vh + 0.5rem);
+  margin-left: calc(3vw + 30px);
+  transform: translateY(-10%);
+  text-decoration: underline wavy black 4px;
+  font-family: "Oswald", sans-serif;
 }
+
 
 .weather-day {
   margin-right: 0.6875rem;
@@ -139,5 +148,11 @@ footer.footer .social-icons a:hover {
 
 .title{
   font-size: 80px;
-  transform: translateX(-10%);
+  font-family: "Dancing Script", cursive;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+.sub-title{
+  color: #0B5ED7 !important;
 }

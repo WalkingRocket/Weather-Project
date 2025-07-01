@@ -10,7 +10,7 @@ async function fetchWeather(city = "Cairo") {
     const response = await fetch(link);
     const data = await response.json();
 
-    CityName.textContent = `${data.location.name} :`;
+    CityName.textContent = `${data.location.name}`;
     console.log(data);
 
     let div = "";
