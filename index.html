@@ -26,19 +26,18 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
-      <div class="logo">
+        <div class="logo">
           <a
-          class="navbar-brand text-white d-flex align-items-center gap-2"
-          href="#"
-        >
-          <i class="fa-brands fa-cloudversify"></i>
-          <div class="d-flex flex-column">
-            <h4 class="logo-title mb-1">Weather</h4>
-            <p class="logo-tagline mb-0 small">Tagline goes here</p>
-          </div>
-        </a>
-
-      </div>
+            class="navbar-brand text-white d-flex align-items-center gap-2"
+            href="#"
+          >
+            <i class="fa-brands fa-cloudversify"></i>
+            <div class="d-flex flex-column">
+              <h4 class="logo-title mb-1">Weather</h4>
+              <p class="logo-tagline mb-0 small">Tagline goes here</p>
+            </div>
+          </a>
+        </div>
         <button
           class="navbar-toggler border-white"
           type="button"
@@ -87,18 +86,22 @@
     >
       <div class="container hero-content mb-2">
         <h1 class="fw-bolder mb-2 text-nowrap title">Weather Forecast</h1>
-        <p class="fs-5 mb-5 fw-bold sub-title">
+        <p class="fs-5 fw-bold sub-title mb-4">
           Get the latest weather updates for your location
         </p>
         <form class="d-flex justify-content-center">
           <input
             type="text"
-            class="form-control me-2"
+            class="form-control rounded-pill"
             id="SearchInput"
             placeholder="Enter city name"
             aria-label="City name"
           />
-          <button class="btn btn-primary" id="Searchbtn" type="submit">
+          <button
+            class="btn btn-primary rounded-pill submit-btn"
+            id="Searchbtn"
+            type="submit"
+          >
             Search
           </button>
         </form>
@@ -113,21 +116,21 @@
     <footer class="footer mt-auto py-5 text-white">
       <div class="container text-center">
         <h5 class="mb-3 fw-bold">Stay Updated</h5>
-        <p class="mb-4 ">
-          Subscribe to get the latest weather news and alerts
-        </p>
-        <form
-          class="d-flex justify-content-center flex-column flex-sm-row gap-3 mb-4"
-        >
-          <input
-            type="email"
-            class="form-control rounded-pill px-4"
-            placeholder="Enter your email"
-          />
-          <button class="btn btn-primary rounded-pill px-4" type="submit">
-            Subscribe
-          </button>
-        </form>
+        <p class="mb-4">Subscribe to get the latest weather news and alerts</p>
+<form class="subscribe-form mb-4">
+  <div class="position-relative w-100">
+    <input
+      type="email"
+      class="form-control rounded-pill px-4 pe-5 email"
+      placeholder="Enter your email"
+    />
+    <button type="submit" class="btn btn-primary subscribe-btn rounded-pill">
+      Subscribe
+    </button>
+  </div>
+</form>
+
+
         <div class="social-icons mb-3">
           <a href="#" class="text-white me-3"
             ><i class="fab fa-facebook-f"></i
@@ -138,9 +141,7 @@
           ></a>
           <a href="#" class="text-white"><i class="fab fa-github"></i></a>
         </div>
-        <p class="small text-muted mb-0">
-          &copy; 2025 WeatherApp. All rights reserved.
-        </p>
+        <p class="small mb-0">&copy; 2025 WeatherApp. All rights reserved.</p>
       </div>
     </footer>
 
