@@ -32,7 +32,7 @@
         </a>
 
         <button
-          class="navbar-toggler  border-white"
+          class="navbar-toggler border-white"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -74,40 +74,67 @@
       </div>
     </nav>
 
-<section class="hero-section text-center d-flex flex-column align-items-center justify-content-start">
-  <div class="container hero-content mb-2">
-    <h1 class="display-1 fw-bolder mb-0">Weather Forecast</h1>
-    <p class= " mb-5 fw-bold">
-      Get the latest weather updates for your location
-    </p>
-    <form class="d-flex justify-content-center">
-      <input
-        type="text"
-        class="form-control me-2"
-        id="SearchInput"
-        placeholder="Enter city name"
-        aria-label="City name"
-      />
-      <button class="btn btn-primary" id="Searchbtn" type="submit">Search</button>
-    </form>
-  </div>
+    <section
+      class="hero-section text-center d-flex flex-column align-items-center justify-content-start"
+    >
+      <div class="container hero-content mb-2">
+        <h1 class="fw-bolder mb-2 text-nowrap title">Weather Forecast</h1>
+        <p class="fs-5 mb-5 fw-bold" style="color: #00a9ff">
+          Get the latest weather updates for your location
+        </p>
+        <form class="d-flex justify-content-center">
+          <input
+            type="text"
+            class="form-control me-2"
+            id="SearchInput"
+            placeholder="Enter city name"
+            aria-label="City name"
+          />
+          <button class="btn btn-primary" id="Searchbtn" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
 
-  <h1 id="CityName" class="weather-city text-capitalize">Cairo</h1>
-  <div class="container weather-cards mt-5">
-    <div class="row g-4 justify-content-center" id="CardsPlaceHolder">
-    </div>
-  </div>
-</section>
+      <h1 id="CityName" class="weather-city me-auto text-capitalize">Cairo</h1>
+      <div class="container weather-cards mt-5">
+        <div class="row g-4 justify-content-center" id="CardsPlaceHolder"></div>
+      </div>
+    </section>
 
-
-
-
-<footer>
-  <div class="container text-center py-4">
-    <input type="text" class="form-control rounded-pill mb-3" placeholder="Enter your email for updates" />
-    <button class="btn btn-primary mb-3">Subscribe</button>
-  </div>
-</footer>
+    <footer class="footer mt-auto py-5 text-white">
+      <div class="container text-center">
+        <h5 class="mb-3 fw-bold">Stay Updated</h5>
+        <p class="mb-4 text-muted">
+          Subscribe to get the latest weather news and alerts
+        </p>
+        <form
+          class="d-flex justify-content-center flex-column flex-sm-row gap-3 mb-4"
+        >
+          <input
+            type="email"
+            class="form-control rounded-pill px-4"
+            placeholder="Enter your email"
+          />
+          <button class="btn btn-primary rounded-pill px-4" type="submit">
+            Subscribe
+          </button>
+        </form>
+        <div class="social-icons mb-3">
+          <a href="#" class="text-white me-3"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white me-3"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+        </div>
+        <p class="small text-muted mb-0">
+          &copy; 2025 WeatherApp. All rights reserved.
+        </p>
+      </div>
+    </footer>
 
     <script src="main.js"></script>
     <script src="bootstrap-5.3.6-dist/js/bootstrap.bundle.min.js"></script>

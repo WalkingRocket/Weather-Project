@@ -1,7 +1,7 @@
 const cards = document.getElementById("CardsPlaceHolder");
 const CityName = document.getElementById("CityName");
 const Input = document.getElementById("SearchInput");
-const Searchbtn = document.getElementById("Searchbtn"); 
+const Searchbtn = document.getElementById("Searchbtn");
 
 async function fetchWeather(city = "Cairo") {
   const link = `http://api.weatherapi.com/v1/forecast.json?key=0c97b8f6851c486b9f2225756253006&q=${city}&days=3`;
@@ -10,14 +10,17 @@ async function fetchWeather(city = "Cairo") {
     const response = await fetch(link);
     const data = await response.json();
 
-    CityName.textContent = data.location.name;
-      console.log(data)
+    CityName.textContent = `${data.location.name} :`;
+    console.log(data);
 
     let div = "";
     data.forecast.forecastday.forEach((day, index) => {
       const rawDate = new Date(day.date);
       const dayName = getDayName(day.date);
-      const dateFormatted = `${rawDate.getDate()} ${rawDate.toLocaleString("en-US", { month: "long" })}`;
+      const dateFormatted = `${rawDate.getDate()} ${rawDate.toLocaleString(
+        "en-US",
+        { month: "long" }
+      )}`;
       const temp = index === 0 ? data.current.temp_c : day.day.avgtemp_c;
       const minTemp = day.day.mintemp_c;
       const maxTemp = day.day.maxtemp_c;
@@ -48,7 +51,6 @@ async function fetchWeather(city = "Cairo") {
     });
 
     cards.innerHTML = div;
-
   } catch (error) {
     console.log("Error fetching weather data:", error);
   }

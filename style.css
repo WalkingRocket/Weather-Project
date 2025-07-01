@@ -63,7 +63,6 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  position: relative;
   z-index: 1;
 }
 
@@ -87,10 +86,19 @@ body {
   margin-bottom: 0.875rem;
 }
 
+.card {
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
 .card-header-wrapper {
   position: relative;
 
 }
+
 
 .card-header-wrapper::after {
   content: "";
@@ -102,12 +110,34 @@ body {
   background-color: #00A9FF;
 }
 
-.weather-city{
+.weather-city {
   font-weight: bolder;
-  font-size: 5.25rem;
-  color: Black;
+  font-size: 68px;
+  margin-top: 10px;
+  margin-left: 35px;
+  transform: translateY(-10px);
+  
 }
 
-.weather-day{
+.weather-day {
   margin-right: 0.6875rem;
+}
+
+.footer {
+  background-color: #1E202B;
+  border-top: 1px solid #2E303C;
+}
+
+footer.footer .social-icons a {
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+footer.footer .social-icons a:hover {
+  color: #00A9FF !important;
+}
+
+.title{
+  font-size: 80px;
+  transform: translateX(-10%);
 }
